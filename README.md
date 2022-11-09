@@ -21,9 +21,9 @@ pip install -r requirements.txt
 `python getting_to_philosophy.py [-m MAX_HOPS] [-l] STARTING_LINK`
 
 positional arguments:
-STARTING LINK: The URL for a Wikipedia page to begin the search from
+* STARTING LINK: The URL for a Wikipedia page to begin the search from
 
 optional arguments:
--m MAX_HOPS, --max_hops MAX_HOPS : Number of links to follow before quitting.
--l, --ignore_loops  : Instead of terminating, choose the next link if a loop is found.
+* -m MAX_HOPS, --max_hops MAX_HOPS : Number of links to follow before quitting.
+* -l, --ignore_loops  : Instead of terminating, choose the next link if a loop is found.
 
