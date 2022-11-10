@@ -46,7 +46,7 @@ def find_first_link(url: str, content: bytes, ignore_loops: bool, visited: dict)
 
                 response = requests.get(next_link)
                 if response.ok:
-                    return next_link, response.content
+                    return response.url, response.content
     return None, None
 
 def search_first_links(url: str = "https://en.wikipedia.org/wiki/Special:Random",
@@ -74,7 +74,7 @@ def search_first_links(url: str = "https://en.wikipedia.org/wiki/Special:Random"
         print("Could not access", url)
         return []
     page_content = response.content
-    print(url)
+    print(response.url)
 
     while hops < max_hops and current_url != goal:
         next_url, page_content = find_first_link(current_url, page_content,
